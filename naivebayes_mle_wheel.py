@@ -15,7 +15,7 @@ import pandas as pd
 
 class NaiveBayes(object):
     def load_data(self):
-        data_set = pd.read_csv('./naivebayes_data.csv')
+        data_set = pd.read_csv('./dataset/naivebayes_data.csv')
         data_set_np = np.array(data_set)
         '''numpy中的shape()属性返回一个元组，代表矩阵的维度，
         # b = np.array([[1,2,3],[3,4,5]])

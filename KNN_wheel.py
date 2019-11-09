@@ -8,6 +8,7 @@ import random
 
 
 def load_data(file_name, split, train_set, test_set):
+    # rt模式下，python在读取文本时会自动把\r\n转换成\n
     with open(file_name, "rt") as csv_file:
         lines = csv.reader(csv_file)  # 返回一个reader对象，该对象将遍历csv文件中的行。从csv文件中读取的每一行都作为字符串列表返回。
         data_set = list(lines)  # 转化成二维数组
@@ -86,7 +87,7 @@ def main():
     train_set = []  # 训练数据集
     test_set = []  # 测试数据集
     split = 0.7  # 分割的比例
-    load_data("./iris.txt", split, train_set, test_set)  # 加载数据
+    load_data("./dataset/iris.txt", split, train_set, test_set)  # 加载数据
     print("Train set :" + repr(len(train_set)))  # repr()的作用是将对象转化为供解释器读取的形式。此处转化成str
     print("Test set :" + str(len(test_set)))
 

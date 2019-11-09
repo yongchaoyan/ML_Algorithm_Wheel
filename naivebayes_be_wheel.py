@@ -23,7 +23,7 @@ class NaiveBayes(object):
         self.s = 3
 
     def load_data(self):
-        data_set = pd.read_csv('./naivebayes_data.csv')
+        data_set = pd.read_csv('./dataset/naivebayes_data.csv')
         data_set_np = np.array(data_set)
         train_set = data_set_np[:, 0:data_set_np.shape[1] - 1]
         labels = data_set_np[:, data_set_np.shape[1] - 1]
